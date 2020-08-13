@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div id="container" class="grid-container"></div>
+    <script>
+
+        let container = document.querySelector('#container')
+        for (let i = 0; i < 256; i++) {
+            let squareDiv = document.createElement("div")
+            squareDiv.classList.add("square")
+            console.log(squareDiv)
+            container.appendChild(squareDiv)
+        }
+    </script>
+</body>
+
+</html>
