@@ -1,11 +1,15 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 2fr);
+    width: 960px;
+    height: 960px;
 }
 
 .square {
     position: relative;
     border: 2px solid black;
-    height: 70px;
-    width: 70px;
+}
+
+.pinkBackground {
+    background-color: pink;
 }
