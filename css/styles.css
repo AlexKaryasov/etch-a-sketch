@@ -1,8 +1,30 @@
+body {
+    text-align: center;
+    background-color: lightgreen;
+    justify-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .grid-container {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(16, 2fr);
     width: 960px;
     height: 960px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn {
+    color: white;
+    background-color: blue;
+    font-weight: 200;
+    border-radius: 2px;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .square {

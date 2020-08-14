@@ -5,57 +5,19 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <title>My Etch</title>
+    <meta name="description" content="My Etch">
+    <meta name="author" content="Alex Karyasov">
 
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-    <button id="clear">Clear Pad</button>
+    <h1>Etch-a-Sketch!</h1>
+    <button id="clear" class="btn">Clear Pad</button>
     <div id="container" class="grid-container"></div>
-    <script>
-        function changeBackground() {
-            this.classList.add("pinkBackground")
-        }
-
-        function addMouseOverEventListenerToSquare(square) {
-            square.addEventListener("mouseover", changeBackground)
-        }
-
-        function clearPad() {
-            let container = document.querySelector('#container')
-            let squares = document.querySelectorAll(".square")
-            squares.forEach(square => {
-                container.removeChild(square)
-            })
-        }
-
-        function repaintPad() {
-            clearPad()
-            drawPad(prompt("How many rows do you want new grid to contain?"))
-        }
-
-        function drawPad(numberOfRows) {
-            let container = document.querySelector('#container')
-            for (let i = 0; i < numberOfRows ** 2; i++) {
-                let squareDiv = document.createElement("div")
-                squareDiv.classList.add("square")
-                squareDiv.style.width = 960 / numberOfRows
-                squareDiv.style.height = 960 / numberOfRows
-                container.appendChild(squareDiv)
-                addMouseOverEventListenerToSquare(squareDiv)
-            }
-            container.style.gridTemplateColumns = `repeat(${numberOfRows}, 1fr)`
-
-            let clearBtn = document.querySelector('#clear')
-            clearBtn.addEventListener('click', repaintPad)
-        }
-
-        drawPad(16)
-    </script>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
